@@ -40,7 +40,7 @@
 #define RawDirectForward false // direct repeat of IR signal with raw data
 #define RawFrequency 38 // raw frequency sending
 
-#define pubIRunknownPrtcl false // key to avoid mqtt publication of unknown IR protocol (set to true if you want to publish unknown protocol)
+#define pubIRunknownPrtcl true // key to avoid mqtt publication of unknown IR protocol (set to true if you want to publish unknown protocol)
 #define PanasonicAddress      0x4004     // Panasonic address (Pre data) 
 
 #ifdef ESP8266 //IR supported protocols on ESP8266, all supported per default
@@ -94,8 +94,8 @@
 
 /*-------------------PIN DEFINITIONS----------------------*/
 #ifdef ESP8266
-  #define IR_RECEIVER_PIN 2
-  #define IR_EMITTER_PIN 16
+  #define IR_RECEIVER_PIN D1
+  #define IR_EMITTER_PIN D2
 #elif ESP32
   #define IR_RECEIVER_PIN 27
   #define IR_EMITTER_PIN 14
